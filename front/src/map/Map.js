@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import { compose, withProps, withState, withHandlers } from "recompose";
 import Markers from './Markers.js';
 import {
@@ -33,7 +34,7 @@ const Map = compose(
   withGoogleMap
 )(props =>
   <GoogleMap
-    defaultCenter={{ lat: 4.71, lng: -74.07 }}
+    defaultCenter={{ lat: 4.7110, lng: -74.0721 }}
     zoom={props.zoom}
     ref={props.onMapMounted}
     onZoomChanged={props.onZoomChanged}
@@ -42,5 +43,8 @@ const Map = compose(
   </GoogleMap>
 );
 
+Map.propTypes = {
+  places: PropTypes.array.isRequired,
+};
 export default Map;
 

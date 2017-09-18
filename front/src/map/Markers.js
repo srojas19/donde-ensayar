@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
 import PlaceMarker from './PlaceMarker.js';
 
+
 class Markers extends Component {
   constructor(props) {
     super(props);
   }
-  
+
+  renderMarkers() {
+      return this.props.places.map((p,i)=>{
+          return <PlaceMarker place={p} key={i}/>
+      });
+  }
+
   render() {
     return (
-        this.props.places.map((place)=>
-        <PlaceMarker place={place} />)
+        <div>{this.renderMarkers()}</div>
     );
   }
 }
