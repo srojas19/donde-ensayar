@@ -34,7 +34,6 @@ const Map = compose(
   withGoogleMap
 )(props =>
   <GoogleMap
-    {/* googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAqNGTlXonHbwSMwaEqB-ahpnutYhsx9R8" */}
     defaultCenter={{ lat: 4.7110, lng: -74.0721 }}
     zoom={props.zoom}
     ref={props.onMapMounted}
