@@ -5,5 +5,5 @@ Integrantes:
 Santiago Rojas - 201512371
 Brandon Bohórquez - 201518028
 
-Técnologías Utilizadas: React, MongoDB, Express, NodeJS.
+Tecnologías Utilizadas: React, MongoDB, Express, NodeJS.
 
