@@ -9,36 +9,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      places : [
-        {
-          nombre: "The Hall Of Rock",
-          direccion: "Calle 67 # 11-38",
-          telefono: "7020261",
-          precio: "32000",
-          lat: 4.653191,
-          lng: -74.062045
-        },
-        {
-          nombre: "The Hall Of Rock 2",
-          direccion: "Calle 67 # 11-38",
-          telefono: "7020261",
-          precio: "32000",
-          lat: 4.6,
-          lng: -74.06201
-        }
-      ]
+      places: []
     };
   }
 
-  // componentDidMount(){
-  //   fetch('/places', {method:'GET', headers:{accept: 'application/json' }})
-  //   .then((res)=>{
-  //     if(res.ok) res.json();
-  //   })
-  //   .then((places)=>{
-  //     this.setState({places: places});
-  //   });
-  // }
+  componentDidMount(){
+    fetch('/api/places', {method:'GET', headers:{accept: 'application/json' }})
+    .then((res)=>{
+      if(res.ok) return res.json();
+    })
+    .then((places)=>{
+      console.log(places);
+      this.setState({places: places});
+    });
+  }
 
   render() {
     return (

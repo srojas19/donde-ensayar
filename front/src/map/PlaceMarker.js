@@ -1,30 +1,4 @@
 import React, { Component } from 'react';
-// import { Marker, InfoWindow } from 'react-google-maps';
-
-// class PlaceMarker extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-  
-//   render() {
-//     return (
-//         <Marker
-//         position={{ lat: this.props.place.lat, lng: this.props.place.lng }}
-//         onClick={this.props.onToggleOpen}>
-//             {this.props.isOpen && <InfoWindow onCloseClick={this.props.onToggleOpen}>
-//                 <p>
-//                     <strong>Nombre: </strong> {this.props.place.nombre}
-//                     <br/>
-//                     <strong>Direccion: </strong> {this.props.place.direccion}
-//                     <br/>
-//                     <strong>Precio: </strong> ${this.props.place.precio}
-//                 </p>
-//             </InfoWindow>}
-//         </Marker>
-//     );
-//   }
-// }
-
 import { compose, withStateHandlers } from "recompose";
 import {
   Marker,
