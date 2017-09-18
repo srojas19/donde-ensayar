@@ -7,9 +7,9 @@ var mongodb = require('mongodb');
 var url = 'mongodb://admin:admin@ds139984.mlab.com:39984/proyecto2';
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index', { title: 'Express' });
+// });
 
 function getPlaces(callback) {
 	mongodb.connect(url,(err, db)=>{
